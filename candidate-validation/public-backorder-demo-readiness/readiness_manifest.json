@@ -1,0 +1,82 @@
+{
+  "ready": false,
+  "status": "verified_but_inactive",
+  "attribution": "Mendeley Data \u2014 Backorder Prediction; CC BY 4.0",
+  "feature_columns": [
+    "INV",
+    "TIM",
+    "INQ",
+    "FOR3",
+    "FOR6",
+    "FOR9",
+    "SAL1",
+    "SAL3",
+    "SAL6",
+    "SAL9",
+    "MIN",
+    "RSK1",
+    "OVRP",
+    "SUP1",
+    "SUP2",
+    "OVRA",
+    "RSK2",
+    "RSK3",
+    "RSK4",
+    "RSK5",
+    "RSK6"
+  ],
+  "model_files": [
+    "selected-package-v1/fold-0-hgb.joblib",
+    "selected-package-v1/fold-1-hgb.joblib",
+    "selected-package-v1/fold-2-hgb.joblib"
+  ],
+  "calibrator_files": [
+    "selected-package-v1/fold-0-isotonic.joblib",
+    "selected-package-v1/fold-1-isotonic.joblib",
+    "selected-package-v1/fold-2-isotonic.joblib"
+  ],
+  "parity_test_file": [
+    "selected-package-v1/packaging_test_report.json",
+    "selected-package-v1/parity_test_results.json"
+  ],
+  "source_sha256": "70604707896dc5eb03e68a907962246f786b464d7ba4ccf3964c139de55c4c99",
+  "reason": "Actual serialized paired HGB models and isotonic calibrators were created and passed offline parity checks; prediction remains inactive.",
+  "activation_allowed": false,
+  "package_dir": "selected-package-v1",
+  "package_manifest": "selected-package-v1/package_manifest.json",
+  "verified_artifact_count": 11,
+  "parity": {
+    "passed": true,
+    "rtol": 1e-07,
+    "atol": 1e-09,
+    "max_absolute_error": 0.0,
+    "prediction_order_preserved": true,
+    "finite_probabilities_in_range": true,
+    "frozen_threshold_preserved": true,
+    "feature_order_preserved": true,
+    "model_calibrator_pairs": 3,
+    "fold_isolation": true
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.4.2",
+    "platform": "Linux-6.18.38+-x86_64-with-glibc2.39"
+  },
+  "model_config": {
+    "algorithm": "HistGradientBoostingClassifier",
+    "max_iter": 100,
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 0.0,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "calibration_method": "isotonic",
+  "frozen_threshold": 0.13447116453950167,
+  "verification_note": "Actual serialized artifacts passed offline parity checks; prediction remains inactive and unintegrated.",
+  "artifact_checksums_verified": true,
+  "artifact_paths_verified": true
+}

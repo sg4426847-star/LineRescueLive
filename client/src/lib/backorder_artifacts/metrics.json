@@ -1,0 +1,200 @@
+{
+  "source": {
+    "name": "Mendeley Data - Backorder Prediction",
+    "license": "CC BY 4.0",
+    "source_url": "https://data.mendeley.com/datasets/krnbcxksn3/1",
+    "file_name": "bopredict.csv",
+    "sha256": "70604707896dc5eb03e68a907962246f786b464d7ba4ccf3964c139de55c4c99",
+    "encoding": "utf-8-sig",
+    "source_columns": [
+      "SKU",
+      "INV",
+      "TIM",
+      "INQ",
+      "FOR3",
+      "FOR6",
+      "FOR9",
+      "SAL1",
+      "SAL3",
+      "SAL6",
+      "SAL9",
+      "MIN",
+      "RSK1",
+      "OVRP",
+      "SUP1",
+      "SUP2",
+      "OVRA",
+      "RSK2",
+      "RSK3",
+      "RSK4",
+      "RSK5",
+      "RSK6",
+      "BO"
+    ],
+    "rows": 1929935,
+    "missing_values": {
+      "SKU": 0,
+      "INV": 0,
+      "TIM": 0,
+      "INQ": 0,
+      "FOR3": 0,
+      "FOR6": 0,
+      "FOR9": 0,
+      "SAL1": 0,
+      "SAL3": 0,
+      "SAL6": 0,
+      "SAL9": 0,
+      "MIN": 0,
+      "RSK1": 0,
+      "OVRP": 0,
+      "SUP1": 0,
+      "SUP2": 0,
+      "OVRA": 0,
+      "RSK2": 0,
+      "RSK3": 0,
+      "RSK4": 0,
+      "RSK5": 0,
+      "RSK6": 0,
+      "BO": 0
+    },
+    "special_values": {
+      "SKU": 0,
+      "INV": 0,
+      "TIM": 0,
+      "INQ": 0,
+      "FOR3": 0,
+      "FOR6": 0,
+      "FOR9": 0,
+      "SAL1": 0,
+      "SAL3": 0,
+      "SAL6": 0,
+      "SAL9": 0,
+      "MIN": 0,
+      "RSK1": 0,
+      "OVRP": 0,
+      "SUP1": 0,
+      "SUP2": 0,
+      "OVRA": 0,
+      "RSK2": 0,
+      "RSK3": 0,
+      "RSK4": 0,
+      "RSK5": 0,
+      "RSK6": 0,
+      "BO": 0
+    },
+    "target_source_column": "BO",
+    "project_target_mapping": "BO -> project_target (derived; original BO preserved)",
+    "identifier_column_excluded": "SKU"
+  },
+  "training": {
+    "algorithm": "SGDClassifier(loss=log_loss)",
+    "class_weight": "balanced",
+    "standardization": "StandardScaler fit on train split only",
+    "alpha": 1e-05,
+    "max_iter": 40,
+    "random_state": 42,
+    "split": "70% train / 15% validation / 15% test, stratified",
+    "feature_columns": [
+      "INV",
+      "TIM",
+      "INQ",
+      "FOR3",
+      "FOR6",
+      "FOR9",
+      "SAL1",
+      "SAL3",
+      "SAL6",
+      "SAL9",
+      "MIN",
+      "RSK1",
+      "OVRP",
+      "SUP1",
+      "SUP2",
+      "OVRA",
+      "RSK2",
+      "RSK3",
+      "RSK4",
+      "RSK5",
+      "RSK6"
+    ],
+    "excluded_columns": [
+      "SKU",
+      "BO"
+    ],
+    "train_rows": 1350954,
+    "validation_rows": 289490,
+    "test_rows": 289491,
+    "train_positive": 9787,
+    "validation_positive": 2097,
+    "test_positive": 2097,
+    "threshold_selection": "validation threshold maximizing F1",
+    "selected_threshold": 0.8989030343812473
+  },
+  "evaluation": {
+    "majority_baseline": {
+      "threshold": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "pr_auc_average_precision": 0.007243748510316383,
+      "confusion_matrix_labels_0_1": [
+        [
+          287394,
+          0
+        ],
+        [
+          2097,
+          0
+        ]
+      ],
+      "class_metrics": {
+        "class_0_not_backorder": {
+          "precision": 0.9927562514896836,
+          "recall": 1.0,
+          "f1": 0.9963649600873657,
+          "support": 287394
+        },
+        "class_1_backorder": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2097
+        }
+      },
+      "predicted_positive": 0,
+      "name": "majority-class baseline"
+    },
+    "model": {
+      "threshold": 0.8989030343812473,
+      "precision": 0.06140951077659938,
+      "recall": 0.17119694802098234,
+      "f1": 0.09039405766083344,
+      "pr_auc_average_precision": 0.037839556531386376,
+      "confusion_matrix_labels_0_1": [
+        [
+          281907,
+          5487
+        ],
+        [
+          1738,
+          359
+        ]
+      ],
+      "class_metrics": {
+        "class_0_not_backorder": {
+          "precision": 0.9938726224682262,
+          "recall": 0.9809077433766884,
+          "f1": 0.9873476242428275,
+          "support": 287394
+        },
+        "class_1_backorder": {
+          "precision": 0.06140951077659938,
+          "recall": 0.17119694802098234,
+          "f1": 0.09039405766083344,
+          "support": 2097
+        }
+      },
+      "predicted_positive": 5846
+    }
+  }
+}

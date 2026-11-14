@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "rtol": 1e-07,
+  "atol": 1e-09,
+  "max_absolute_error": 0.0,
+  "prediction_order_preserved": true,
+  "finite_probabilities_in_range": true,
+  "frozen_threshold_preserved": true,
+  "feature_order_preserved": true,
+  "model_calibrator_pairs": 3,
+  "fold_isolation": true
+}

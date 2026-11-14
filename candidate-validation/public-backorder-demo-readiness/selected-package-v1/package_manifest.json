@@ -1,0 +1,177 @@
+{
+  "ready": false,
+  "activation_allowed": false,
+  "status": "verified_but_inactive",
+  "attribution": "Mendeley Data \u2014 Backorder Prediction; CC BY 4.0",
+  "source_sha256": "70604707896dc5eb03e68a907962246f786b464d7ba4ccf3964c139de55c4c99",
+  "feature_columns": [
+    "INV",
+    "TIM",
+    "INQ",
+    "FOR3",
+    "FOR6",
+    "FOR9",
+    "SAL1",
+    "SAL3",
+    "SAL6",
+    "SAL9",
+    "MIN",
+    "RSK1",
+    "OVRP",
+    "SUP1",
+    "SUP2",
+    "OVRA",
+    "RSK2",
+    "RSK3",
+    "RSK4",
+    "RSK5",
+    "RSK6"
+  ],
+  "model_config": {
+    "algorithm": "HistGradientBoostingClassifier",
+    "max_iter": 100,
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 0.0,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "calibration_method": "isotonic",
+  "frozen_threshold": 0.13447116453950167,
+  "random_seed": 42,
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.4.2",
+    "platform": "Linux-6.18.38+-x86_64-with-glibc2.39"
+  },
+  "outer_split_reference": "existing group-aware split from audit report; unchanged",
+  "inner_split": {
+    "strategy": "StratifiedGroupKFold",
+    "n_splits": 3,
+    "shuffle": true,
+    "random_state": 42,
+    "fold_assignment_file": "inner_fold_assignments.npz",
+    "fold_isolation_verified": true
+  },
+  "pairs": [
+    {
+      "fold_id": 0,
+      "model_file": "fold-0-hgb.joblib",
+      "calibrator_file": "fold-0-isotonic.joblib",
+      "train_rows": 924144,
+      "holdout_rows": 429939,
+      "holdout_positive": 3329,
+      "holdout_group_count": 254512,
+      "calibration_raw_prediction_sha256": "9fa2d7a4a49837e3a2aa119c2a476b3506128ed5b10ac86b67da85b3b7943ea9",
+      "model_sha256": "03f4e9ad7ebd0b4be902adbfd67cdc2c0eb82206b123073a1da6f9d6cefcb13a",
+      "calibrator_sha256": "83acb176d1a4ce5127313cd0c5cddaed91571e392815a15d74bfd68aad055c7f",
+      "model_bytes": 170304,
+      "calibrator_bytes": 1884
+    },
+    {
+      "fold_id": 1,
+      "model_file": "fold-1-hgb.joblib",
+      "calibrator_file": "fold-1-isotonic.joblib",
+      "train_rows": 874638,
+      "holdout_rows": 479445,
+      "holdout_positive": 3141,
+      "holdout_group_count": 254512,
+      "calibration_raw_prediction_sha256": "bc4da2c15ec858046d6d75c4f58814c742586cd99103507d21adae7d8a5155bc",
+      "model_sha256": "7f16b3f40c2e9d0ba327560a65aaef4c33ad544b2fc8a5d2435af14c049f904b",
+      "calibrator_sha256": "f9db2f72dc1ae1452bc1250070c47e117a87a9f396ee16ab3061c6ad5744fe7c",
+      "model_bytes": 170503,
+      "calibrator_bytes": 1763
+    },
+    {
+      "fold_id": 2,
+      "model_file": "fold-2-hgb.joblib",
+      "calibrator_file": "fold-2-isotonic.joblib",
+      "train_rows": 909384,
+      "holdout_rows": 444699,
+      "holdout_positive": 3365,
+      "holdout_group_count": 254497,
+      "calibration_raw_prediction_sha256": "9f566071981f568b4efdc080220a152dee43c7118d6a2fab25ce1e951d78f188",
+      "model_sha256": "e9926833410eea36d818c2d277ffed4f4eb45f8512460d41f88b7eabd952e0af",
+      "calibrator_sha256": "2be3f2fa469aaa22ae4d5b14e6a70806314d17c94dee8e046a2eddd976991b4a",
+      "model_bytes": 170032,
+      "calibrator_bytes": 1844
+    }
+  ],
+  "parity": {
+    "passed": true,
+    "rtol": 1e-07,
+    "atol": 1e-09,
+    "max_absolute_error": 0.0,
+    "prediction_order_preserved": true,
+    "finite_probabilities_in_range": true,
+    "frozen_threshold_preserved": true,
+    "feature_order_preserved": true,
+    "model_calibrator_pairs": 3,
+    "fold_isolation": true
+  },
+  "artifacts": [
+    {
+      "path": "fold-0-hgb.joblib",
+      "sha256": "03f4e9ad7ebd0b4be902adbfd67cdc2c0eb82206b123073a1da6f9d6cefcb13a",
+      "bytes": 170304
+    },
+    {
+      "path": "fold-1-hgb.joblib",
+      "sha256": "7f16b3f40c2e9d0ba327560a65aaef4c33ad544b2fc8a5d2435af14c049f904b",
+      "bytes": 170503
+    },
+    {
+      "path": "fold-2-hgb.joblib",
+      "sha256": "e9926833410eea36d818c2d277ffed4f4eb45f8512460d41f88b7eabd952e0af",
+      "bytes": 170032
+    },
+    {
+      "path": "fold-0-isotonic.joblib",
+      "sha256": "83acb176d1a4ce5127313cd0c5cddaed91571e392815a15d74bfd68aad055c7f",
+      "bytes": 1884
+    },
+    {
+      "path": "fold-1-isotonic.joblib",
+      "sha256": "f9db2f72dc1ae1452bc1250070c47e117a87a9f396ee16ab3061c6ad5744fe7c",
+      "bytes": 1763
+    },
+    {
+      "path": "fold-2-isotonic.joblib",
+      "sha256": "2be3f2fa469aaa22ae4d5b14e6a70806314d17c94dee8e046a2eddd976991b4a",
+      "bytes": 1844
+    },
+    {
+      "path": "inner_fold_assignments.npz",
+      "sha256": "838961011ecfa0e2a606cbcf2fbcbce2ae19ad7ce674bc43ee06109238001ac7",
+      "bytes": 2376556
+    },
+    {
+      "path": "parity_fixture.json",
+      "sha256": "698b1018a01e67b706e8e57d1189834559bee37bd9ed3ea82c19a00b4f09956b",
+      "bytes": 6746
+    },
+    {
+      "path": "parity_predictions_in_memory.json",
+      "sha256": "e7dc56d2860f0fded18e0d971cc5bcd9bafa9c2fa851a0e8275538e24f349b62",
+      "bytes": 625
+    },
+    {
+      "path": "parity_test_results.json",
+      "sha256": "5ea0f7b91169648c8784999d872012e032dbaf05ea87d6e10e155b12cf618b0b",
+      "bytes": 293
+    },
+    {
+      "path": "fold_details.json",
+      "sha256": "c72507e24700f58b823de32aa6950bef14dcbb0c9566ab0c11714e8718fd6eff",
+      "bytes": 2318
+    }
+  ],
+  "activation_blockers": [
+    "No application integration is permitted in this phase.",
+    "Feature meanings, units, and time windows remain undocumented.",
+    "Human approval and a separate demo route are still required."
+  ]
+}

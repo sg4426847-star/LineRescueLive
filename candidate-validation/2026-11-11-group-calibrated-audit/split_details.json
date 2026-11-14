@@ -1,0 +1,146 @@
+{
+  "outer": {
+    "method": "StratifiedGroupKFold(n_splits=20, shuffle=True, random_state=42); folds 0-13 train, 14-16 validation, 17-19 test",
+    "random_seed": 42,
+    "train": {
+      "rows": 1354083,
+      "positive": 9835,
+      "negative": 1344248,
+      "positive_rate": 0.007263217985898944
+    },
+    "validation": {
+      "rows": 301486,
+      "positive": 2042,
+      "negative": 299444,
+      "positive_rate": 0.006773117159669106
+    },
+    "test": {
+      "rows": 274366,
+      "positive": 2104,
+      "negative": 272262,
+      "positive_rate": 0.007668588673523687
+    },
+    "fold_sizes": [
+      108483,
+      95220,
+      92701,
+      94472,
+      99115,
+      116671,
+      91232,
+      96669,
+      92723,
+      92548,
+      95358,
+      95955,
+      90101,
+      92835,
+      109513,
+      93104,
+      98869,
+      95768,
+      88908,
+      89690
+    ],
+    "fold_positive_counts": [
+      720,
+      685,
+      771,
+      679,
+      691,
+      691,
+      661,
+      689,
+      684,
+      739,
+      714,
+      717,
+      706,
+      688,
+      653,
+      708,
+      681,
+      703,
+      665,
+      736
+    ],
+    "unique_groups": {
+      "train": 763521,
+      "validation": 163605,
+      "test": 163515
+    },
+    "cross_boundary_groups": 0
+  },
+  "inner": {
+    "GroupKFold": {
+      "folds": [
+        {
+          "fold": 0,
+          "train_rows": 902722,
+          "train_positive": 6547,
+          "train_negative": 896175,
+          "holdout_rows": 451361,
+          "holdout_positive": 3288,
+          "holdout_negative": 448073,
+          "group_overlap": 0
+        },
+        {
+          "fold": 1,
+          "train_rows": 902722,
+          "train_positive": 6545,
+          "train_negative": 896177,
+          "holdout_rows": 451361,
+          "holdout_positive": 3290,
+          "holdout_negative": 448071,
+          "group_overlap": 0
+        },
+        {
+          "fold": 2,
+          "train_rows": 902722,
+          "train_positive": 6578,
+          "train_negative": 896144,
+          "holdout_rows": 451361,
+          "holdout_positive": 3257,
+          "holdout_negative": 448104,
+          "group_overlap": 0
+        }
+      ],
+      "all_groups_isolated": true
+    },
+    "StratifiedGroupKFold": {
+      "folds": [
+        {
+          "fold": 0,
+          "train_rows": 924144,
+          "train_positive": 6506,
+          "train_negative": 917638,
+          "holdout_rows": 429939,
+          "holdout_positive": 3329,
+          "holdout_negative": 426610,
+          "group_overlap": 0
+        },
+        {
+          "fold": 1,
+          "train_rows": 874638,
+          "train_positive": 6694,
+          "train_negative": 867944,
+          "holdout_rows": 479445,
+          "holdout_positive": 3141,
+          "holdout_negative": 476304,
+          "group_overlap": 0
+        },
+        {
+          "fold": 2,
+          "train_rows": 909384,
+          "train_positive": 6470,
+          "train_negative": 902914,
+          "holdout_rows": 444699,
+          "holdout_positive": 3365,
+          "holdout_negative": 441334,
+          "group_overlap": 0
+        }
+      ],
+      "all_groups_isolated": true
+    }
+  }
+}

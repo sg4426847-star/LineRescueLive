@@ -1,0 +1,11 @@
+{
+  "task_kind": "new-document",
+  "output": "pdf",
+  "signals": [],
+  "hard_constraints": ["brief", "explain synthetic data and uniqueness clearly"],
+  "content_features": {
+    "code_blocks": 1,
+    "defined_terms": 8,
+    "portrait_images": 0
+  }
+}
